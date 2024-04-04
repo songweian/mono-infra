@@ -5,3 +5,8 @@ services:
       - ./conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 100M
