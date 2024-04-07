@@ -1,6 +1,8 @@
 services:
   nginx:
     image: nginx:latest
+    networks:
+      - shared-network
     volumes:
       - ./conf.d:/etc/nginx/conf.d
     ports:
@@ -10,3 +12,6 @@ services:
         limits:
           cpus: '0.20'
           memory: 100M
+networks:
+  infra-network:
+    external: true
