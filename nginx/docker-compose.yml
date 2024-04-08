@@ -7,7 +7,7 @@ services:
       - ./conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
-      - 8086:8080
+      - 8086:8086
     deploy:
       resources:
         limits:
