@@ -2,7 +2,7 @@ services:
   nginx:
     image: nginx:latest
     networks:
-      - nfra-network
+      - infra-network
     volumes:
       - ./conf.d:/etc/nginx/conf.d
     ports:
